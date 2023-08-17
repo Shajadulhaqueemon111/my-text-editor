@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Manipulation</title>
+    <script>
+        function doubleNumber() {
+            var inputField = document.getElementById("numberInput");
+            var inputValue = inputField.value;
+
+            if (isNaN(inputValue)) {
+                alert("Please enter a number.");
+            } else {
+                var doubledValue = parseFloat(inputValue) * 2;
+                document.getElementById("result").innerHTML = "Double: " + doubledValue;
+            }
+        }
+
+        function tripleNumber() {
+            var inputField = document.getElementById("numberInput");
+            var inputValue = inputField.value;
+
+            if (isNaN(inputValue)) {
+                alert("Please enter a number.");
+            } else {
+                var tripledValue = parseFloat(inputValue) * 3;
+                document.getElementById("result").innerHTML = "Triple: " + tripledValue;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Number Manipulation</h1>
+    <input type="text" id="numberInput" placeholder="Enter a number">
+    <button onclick="doubleNumber()">Double</button>
+    <button onclick="tripleNumber()">Triple</button>
+    <p id="result"></p>
+</body>
+</html>
